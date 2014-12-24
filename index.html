@@ -1,0 +1,2951 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Title block allowing child pages to override -->
+    <title>Empty</title>
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        
+    <!-- Styles -->
+    <!-- Include Font Awesome. -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Include Editor style. -->
+    <link href="assets/css/froala_editor.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+    .froala-editor .fr-dropdown .fr-trigger.active+.fr-dropdown-menu {
+        height: 200px;
+        overflow-y: scroll;
+    }
+    #edit {
+        margin-top: 20em;
+    }
+    </style>
+
+</head>
+<body>
+        <div id="wrapper">
+            <!-- Include -->
+            <!-- Content block, child page inject content -->
+             
+    <div id="edit">I am standard editable text. Thanks, Froala!</div>
+
+        </div>
+
+        <!-- Include jQuery. -->
+        <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+
+        <!-- Include JS files. -->
+        <script src="assets/scripts/froala_editor.min.js"></script>
+
+        <!-- Include IE8 JS. -->
+        <!--[if lt IE 9]>
+            <script src="scripts/js/froala_editor_ie8.min.js"></script>
+        <![endif]-->
+
+<script>
+    $(function() {
+        $('div#edit').editable({
+            inlineMode: true,
+            countCharacters: false,
+            alwaysVisible: true,
+            initOnClick: true,
+            buttons: ['bold', 'italic', 'underline', 'strikeThrough', 'fontFamily', 'fontSize', 'color', 'sep', 'formatBlock', 'blockStyle', 'align', 'insertOrderedList', 'insertUnorderedList', 'outdent', 'indent', 'selectAll', 'sep', 'createLink', 'insertImage', 'insertVideo', 'undo', 'removeFormat', 'redo', 'html', 'font_awesome_dropdown'],
+                customDropdowns: {
+                    font_awesome_dropdown: {
+                        title: 'Icon Fonts',
+                        icon: {
+                            type: 'font',
+                            value: 'fa fa-flag'
+                        },
+                        options: {
+                            
+                            '<i class="fa fa-lg fa-adjust"></i> Adjust': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-adjust"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-adn"></i> Adn': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-adn"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-align-center"></i> Align center': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-align-center"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-align-justify"></i> Align justify': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-align-justify"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-align-left"></i> Align left': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-align-left"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-align-right"></i> Align right': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-align-right"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-ambulance"></i> Ambulance': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-ambulance"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-anchor"></i> Anchor': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-anchor"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-android"></i> Android': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-android"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-angellist"></i> Angellist': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-angellist"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-angle-double-down"></i> Angle double down': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-angle-double-down"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-angle-double-left"></i> Angle double left': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-angle-double-left"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-angle-double-right"></i> Angle double right': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-angle-double-right"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-angle-double-up"></i> Angle double up': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-angle-double-up"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-angle-down"></i> Angle down': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-angle-down"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-angle-left"></i> Angle left': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-angle-left"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-angle-right"></i> Angle right': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-angle-right"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-angle-up"></i> Angle up': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-angle-up"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-apple"></i> Apple': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-apple"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-archive"></i> Archive': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-archive"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-area-chart"></i> Area chart': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-area-chart"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrow-circle-down"></i> Arrow circle down': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrow-circle-down"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrow-circle-left"></i> Arrow circle left': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrow-circle-left"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrow-circle-o-down"></i> Arrow circle o down': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrow-circle-o-down"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrow-circle-o-left"></i> Arrow circle o left': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrow-circle-o-left"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrow-circle-o-right"></i> Arrow circle o right': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrow-circle-o-right"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrow-circle-o-up"></i> Arrow circle o up': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrow-circle-o-up"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrow-circle-right"></i> Arrow circle right': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrow-circle-right"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrow-circle-up"></i> Arrow circle up': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrow-circle-up"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrow-down"></i> Arrow down': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrow-down"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrow-left"></i> Arrow left': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrow-left"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrow-right"></i> Arrow right': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrow-right"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrow-up"></i> Arrow up': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrow-up"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrows"></i> Arrows': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrows"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrows-alt"></i> Arrows alt': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrows-alt"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrows-h"></i> Arrows h': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrows-h"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-arrows-v"></i> Arrows v': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-arrows-v"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-asterisk"></i> Asterisk': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-asterisk"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-at"></i> At': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-at"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-backward"></i> Backward': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-backward"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-ban"></i> Ban': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-ban"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bar-chart"></i> Bar chart': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bar-chart"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-barcode"></i> Barcode': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-barcode"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bars"></i> Bars': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bars"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-beer"></i> Beer': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-beer"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-behance"></i> Behance': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-behance"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-behance-square"></i> Behance square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-behance-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bell"></i> Bell': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bell"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bell-o"></i> Bell o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bell-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bell-slash"></i> Bell slash': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bell-slash"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bell-slash-o"></i> Bell slash o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bell-slash-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bicycle"></i> Bicycle': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bicycle"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-binoculars"></i> Binoculars': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-binoculars"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-birthday-cake"></i> Birthday cake': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-birthday-cake"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bitbucket"></i> Bitbucket': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bitbucket"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bitbucket-square"></i> Bitbucket square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bitbucket-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bold"></i> Bold': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bold"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bolt"></i> Bolt': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bolt"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bomb"></i> Bomb': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bomb"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-book"></i> Book': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-book"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bookmark"></i> Bookmark': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bookmark"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bookmark-o"></i> Bookmark o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bookmark-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-briefcase"></i> Briefcase': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-briefcase"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-btc"></i> Btc': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-btc"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bug"></i> Bug': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bug"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-building"></i> Building': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-building"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-building-o"></i> Building o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-building-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bullhorn"></i> Bullhorn': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bullhorn"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bullseye"></i> Bullseye': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bullseye"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-bus"></i> Bus': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-bus"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-calculator"></i> Calculator': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-calculator"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-calendar"></i> Calendar': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-calendar"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-calendar-o"></i> Calendar o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-calendar-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-camera"></i> Camera': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-camera"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-camera-retro"></i> Camera retro': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-camera-retro"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-car"></i> Car': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-car"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-caret-down"></i> Caret down': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-caret-down"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-caret-left"></i> Caret left': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-caret-left"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-caret-right"></i> Caret right': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-caret-right"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-caret-square-o-down"></i> Caret square o down': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-caret-square-o-down"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-caret-square-o-left"></i> Caret square o left': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-caret-square-o-left"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-caret-square-o-right"></i> Caret square o right': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-caret-square-o-right"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-caret-square-o-up"></i> Caret square o up': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-caret-square-o-up"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-caret-up"></i> Caret up': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-caret-up"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-cc"></i> Cc': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-cc"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-cc-amex"></i> Cc amex': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-cc-amex"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-cc-discover"></i> Cc discover': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-cc-discover"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-cc-mastercard"></i> Cc mastercard': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-cc-mastercard"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-cc-paypal"></i> Cc paypal': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-cc-paypal"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-cc-stripe"></i> Cc stripe': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-cc-stripe"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-cc-visa"></i> Cc visa': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-cc-visa"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-certificate"></i> Certificate': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-certificate"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-chain-broken"></i> Chain broken': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-chain-broken"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-check"></i> Check': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-check"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-check-circle"></i> Check circle': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-check-circle"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-check-circle-o"></i> Check circle o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-check-circle-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-check-square"></i> Check square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-check-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-check-square-o"></i> Check square o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-check-square-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-chevron-circle-down"></i> Chevron circle down': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-chevron-circle-down"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-chevron-circle-left"></i> Chevron circle left': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-chevron-circle-left"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-chevron-circle-right"></i> Chevron circle right': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-chevron-circle-right"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-chevron-circle-up"></i> Chevron circle up': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-chevron-circle-up"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-chevron-down"></i> Chevron down': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-chevron-down"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-chevron-left"></i> Chevron left': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-chevron-left"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-chevron-right"></i> Chevron right': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-chevron-right"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-chevron-up"></i> Chevron up': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-chevron-up"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-child"></i> Child': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-child"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-circle"></i> Circle': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-circle"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-circle-o"></i> Circle o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-circle-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-circle-o-notch"></i> Circle o notch': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-circle-o-notch"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-circle-thin"></i> Circle thin': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-circle-thin"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-clipboard"></i> Clipboard': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-clipboard"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-clock-o"></i> Clock o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-clock-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-cloud"></i> Cloud': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-cloud"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-cloud-download"></i> Cloud download': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-cloud-download"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-cloud-upload"></i> Cloud upload': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-cloud-upload"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-code"></i> Code': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-code"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-code-fork"></i> Code fork': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-code-fork"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-codepen"></i> Codepen': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-codepen"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-coffee"></i> Coffee': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-coffee"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-cog"></i> Cog': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-cog"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-cogs"></i> Cogs': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-cogs"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-columns"></i> Columns': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-columns"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-comment"></i> Comment': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-comment"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-comment-o"></i> Comment o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-comment-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-comments"></i> Comments': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-comments"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-comments-o"></i> Comments o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-comments-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-compass"></i> Compass': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-compass"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-compress"></i> Compress': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-compress"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-copyright"></i> Copyright': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-copyright"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-credit-card"></i> Credit card': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-credit-card"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-crop"></i> Crop': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-crop"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-crosshairs"></i> Crosshairs': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-crosshairs"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-css3"></i> Css3': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-css3"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-cube"></i> Cube': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-cube"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-cubes"></i> Cubes': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-cubes"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-cutlery"></i> Cutlery': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-cutlery"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-database"></i> Database': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-database"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-delicious"></i> Delicious': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-delicious"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-desktop"></i> Desktop': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-desktop"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-deviantart"></i> Deviantart': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-deviantart"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-digg"></i> Digg': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-digg"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-dot-circle-o"></i> Dot circle o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-dot-circle-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-download"></i> Download': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-download"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-dribbble"></i> Dribbble': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-dribbble"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-dropbox"></i> Dropbox': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-dropbox"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-drupal"></i> Drupal': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-drupal"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-eject"></i> Eject': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-eject"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-ellipsis-h"></i> Ellipsis h': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-ellipsis-h"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-ellipsis-v"></i> Ellipsis v': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-ellipsis-v"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-empire"></i> Empire': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-empire"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-envelope"></i> Envelope': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-envelope"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-envelope-o"></i> Envelope o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-envelope-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-envelope-square"></i> Envelope square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-envelope-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-eraser"></i> Eraser': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-eraser"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-eur"></i> Eur': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-eur"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-exchange"></i> Exchange': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-exchange"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-exclamation"></i> Exclamation': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-exclamation"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-exclamation-circle"></i> Exclamation circle': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-exclamation-circle"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-exclamation-triangle"></i> Exclamation triangle': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-exclamation-triangle"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-expand"></i> Expand': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-expand"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-external-link"></i> External link': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-external-link"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-external-link-square"></i> External link square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-external-link-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-eye"></i> Eye': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-eye"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-eye-slash"></i> Eye slash': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-eye-slash"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-eyedropper"></i> Eyedropper': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-eyedropper"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-facebook"></i> Facebook': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-facebook"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-facebook-square"></i> Facebook square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-facebook-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-fast-backward"></i> Fast backward': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-fast-backward"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-fast-forward"></i> Fast forward': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-fast-forward"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-fax"></i> Fax': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-fax"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-female"></i> Female': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-female"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-fighter-jet"></i> Fighter jet': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-fighter-jet"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-file"></i> File': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-file"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-file-archive-o"></i> File archive o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-file-archive-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-file-audio-o"></i> File audio o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-file-audio-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-file-code-o"></i> File code o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-file-code-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-file-excel-o"></i> File excel o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-file-excel-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-file-image-o"></i> File image o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-file-image-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-file-o"></i> File o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-file-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-file-pdf-o"></i> File pdf o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-file-pdf-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-file-powerpoint-o"></i> File powerpoint o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-file-powerpoint-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-file-text"></i> File text': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-file-text"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-file-text-o"></i> File text o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-file-text-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-file-video-o"></i> File video o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-file-video-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-file-word-o"></i> File word o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-file-word-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-files-o"></i> Files o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-files-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-film"></i> Film': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-film"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-filter"></i> Filter': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-filter"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-fire"></i> Fire': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-fire"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-fire-extinguisher"></i> Fire extinguisher': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-fire-extinguisher"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-flag"></i> Flag': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-flag"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-flag-checkered"></i> Flag checkered': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-flag-checkered"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-flag-o"></i> Flag o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-flag-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-flask"></i> Flask': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-flask"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-flickr"></i> Flickr': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-flickr"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-floppy-o"></i> Floppy o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-floppy-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-folder"></i> Folder': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-folder"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-folder-o"></i> Folder o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-folder-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-folder-open"></i> Folder open': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-folder-open"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-folder-open-o"></i> Folder open o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-folder-open-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-font"></i> Font': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-font"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-forward"></i> Forward': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-forward"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-foursquare"></i> Foursquare': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-foursquare"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-frown-o"></i> Frown o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-frown-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-futbol-o"></i> Futbol o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-futbol-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-gamepad"></i> Gamepad': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-gamepad"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-gavel"></i> Gavel': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-gavel"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-gbp"></i> Gbp': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-gbp"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-gift"></i> Gift': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-gift"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-git"></i> Git': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-git"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-git-square"></i> Git square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-git-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-github"></i> Github': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-github"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-github-alt"></i> Github alt': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-github-alt"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-github-square"></i> Github square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-github-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-gittip"></i> Gittip': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-gittip"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-glass"></i> Glass': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-glass"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-globe"></i> Globe': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-globe"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-google"></i> Google': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-google"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-google-plus"></i> Google plus': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-google-plus"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-google-plus-square"></i> Google plus square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-google-plus-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-google-wallet"></i> Google wallet': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-google-wallet"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-graduation-cap"></i> Graduation cap': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-graduation-cap"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-h-square"></i> H square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-h-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-hacker-news"></i> Hacker news': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-hacker-news"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-hand-o-down"></i> Hand o down': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-hand-o-down"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-hand-o-left"></i> Hand o left': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-hand-o-left"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-hand-o-right"></i> Hand o right': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-hand-o-right"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-hand-o-up"></i> Hand o up': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-hand-o-up"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-hdd-o"></i> Hdd o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-hdd-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-header"></i> Header': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-header"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-headphones"></i> Headphones': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-headphones"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-heart"></i> Heart': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-heart"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-heart-o"></i> Heart o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-heart-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-history"></i> History': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-history"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-home"></i> Home': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-home"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-hospital-o"></i> Hospital o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-hospital-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-html5"></i> Html5': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-html5"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-ils"></i> Ils': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-ils"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-inbox"></i> Inbox': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-inbox"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-indent"></i> Indent': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-indent"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-info"></i> Info': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-info"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-info-circle"></i> Info circle': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-info-circle"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-inr"></i> Inr': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-inr"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-instagram"></i> Instagram': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-instagram"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-ioxhost"></i> Ioxhost': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-ioxhost"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-italic"></i> Italic': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-italic"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-joomla"></i> Joomla': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-joomla"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-jpy"></i> Jpy': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-jpy"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-jsfiddle"></i> Jsfiddle': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-jsfiddle"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-key"></i> Key': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-key"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-keyboard-o"></i> Keyboard o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-keyboard-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-krw"></i> Krw': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-krw"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-language"></i> Language': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-language"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-laptop"></i> Laptop': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-laptop"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-lastfm"></i> Lastfm': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-lastfm"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-lastfm-square"></i> Lastfm square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-lastfm-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-leaf"></i> Leaf': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-leaf"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-lemon-o"></i> Lemon o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-lemon-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-level-down"></i> Level down': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-level-down"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-level-up"></i> Level up': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-level-up"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-life-ring"></i> Life ring': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-life-ring"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-lightbulb-o"></i> Lightbulb o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-lightbulb-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-line-chart"></i> Line chart': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-line-chart"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-link"></i> Link': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-link"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-linkedin"></i> Linkedin': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-linkedin"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-linkedin-square"></i> Linkedin square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-linkedin-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-linux"></i> Linux': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-linux"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-list"></i> List': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-list"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-list-alt"></i> List alt': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-list-alt"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-list-ol"></i> List ol': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-list-ol"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-list-ul"></i> List ul': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-list-ul"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-location-arrow"></i> Location arrow': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-location-arrow"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-lock"></i> Lock': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-lock"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-long-arrow-down"></i> Long arrow down': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-long-arrow-down"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-long-arrow-left"></i> Long arrow left': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-long-arrow-left"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-long-arrow-right"></i> Long arrow right': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-long-arrow-right"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-long-arrow-up"></i> Long arrow up': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-long-arrow-up"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-magic"></i> Magic': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-magic"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-magnet"></i> Magnet': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-magnet"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-male"></i> Male': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-male"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-map-marker"></i> Map marker': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-map-marker"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-maxcdn"></i> Maxcdn': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-maxcdn"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-meanpath"></i> Meanpath': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-meanpath"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-medkit"></i> Medkit': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-medkit"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-meh-o"></i> Meh o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-meh-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-microphone"></i> Microphone': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-microphone"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-microphone-slash"></i> Microphone slash': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-microphone-slash"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-minus"></i> Minus': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-minus"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-minus-circle"></i> Minus circle': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-minus-circle"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-minus-square"></i> Minus square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-minus-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-minus-square-o"></i> Minus square o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-minus-square-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-mobile"></i> Mobile': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-mobile"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-money"></i> Money': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-money"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-moon-o"></i> Moon o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-moon-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-music"></i> Music': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-music"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-newspaper-o"></i> Newspaper o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-newspaper-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-openid"></i> Openid': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-openid"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-outdent"></i> Outdent': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-outdent"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-pagelines"></i> Pagelines': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-pagelines"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-paint-brush"></i> Paint brush': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-paint-brush"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-paper-plane"></i> Paper plane': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-paper-plane"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-paper-plane-o"></i> Paper plane o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-paper-plane-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-paperclip"></i> Paperclip': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-paperclip"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-paragraph"></i> Paragraph': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-paragraph"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-pause"></i> Pause': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-pause"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-paw"></i> Paw': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-paw"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-paypal"></i> Paypal': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-paypal"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-pencil"></i> Pencil': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-pencil"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-pencil-square"></i> Pencil square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-pencil-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-pencil-square-o"></i> Pencil square o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-pencil-square-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-phone"></i> Phone': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-phone"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-phone-square"></i> Phone square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-phone-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-picture-o"></i> Picture o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-picture-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-pie-chart"></i> Pie chart': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-pie-chart"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-pied-piper"></i> Pied piper': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-pied-piper"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-pied-piper-alt"></i> Pied piper alt': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-pied-piper-alt"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-pinterest"></i> Pinterest': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-pinterest"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-pinterest-square"></i> Pinterest square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-pinterest-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-plane"></i> Plane': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-plane"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-play"></i> Play': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-play"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-play-circle"></i> Play circle': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-play-circle"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-play-circle-o"></i> Play circle o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-play-circle-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-plug"></i> Plug': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-plug"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-plus"></i> Plus': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-plus"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-plus-circle"></i> Plus circle': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-plus-circle"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-plus-square"></i> Plus square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-plus-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-plus-square-o"></i> Plus square o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-plus-square-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-power-off"></i> Power off': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-power-off"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-print"></i> Print': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-print"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-puzzle-piece"></i> Puzzle piece': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-puzzle-piece"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-qq"></i> Qq': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-qq"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-qrcode"></i> Qrcode': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-qrcode"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-question"></i> Question': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-question"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-question-circle"></i> Question circle': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-question-circle"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-quote-left"></i> Quote left': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-quote-left"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-quote-right"></i> Quote right': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-quote-right"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-random"></i> Random': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-random"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-rebel"></i> Rebel': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-rebel"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-recycle"></i> Recycle': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-recycle"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-reddit"></i> Reddit': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-reddit"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-reddit-square"></i> Reddit square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-reddit-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-refresh"></i> Refresh': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-refresh"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-renren"></i> Renren': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-renren"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-repeat"></i> Repeat': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-repeat"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-reply"></i> Reply': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-reply"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-reply-all"></i> Reply all': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-reply-all"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-retweet"></i> Retweet': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-retweet"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-road"></i> Road': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-road"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-rocket"></i> Rocket': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-rocket"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-rss"></i> Rss': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-rss"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-rss-square"></i> Rss square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-rss-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-rub"></i> Rub': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-rub"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-scissors"></i> Scissors': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-scissors"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-search"></i> Search': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-search"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-search-minus"></i> Search minus': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-search-minus"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-search-plus"></i> Search plus': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-search-plus"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-share"></i> Share': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-share"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-share-alt"></i> Share alt': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-share-alt"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-share-alt-square"></i> Share alt square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-share-alt-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-share-square"></i> Share square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-share-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-share-square-o"></i> Share square o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-share-square-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-shield"></i> Shield': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-shield"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-shopping-cart"></i> Shopping cart': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-shopping-cart"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-sign-in"></i> Sign in': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-sign-in"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-sign-out"></i> Sign out': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-sign-out"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-signal"></i> Signal': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-signal"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-sitemap"></i> Sitemap': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-sitemap"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-skype"></i> Skype': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-skype"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-slack"></i> Slack': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-slack"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-sliders"></i> Sliders': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-sliders"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-slideshare"></i> Slideshare': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-slideshare"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-smile-o"></i> Smile o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-smile-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-sort"></i> Sort': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-sort"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-sort-alpha-asc"></i> Sort alpha asc': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-sort-alpha-asc"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-sort-alpha-desc"></i> Sort alpha desc': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-sort-alpha-desc"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-sort-amount-asc"></i> Sort amount asc': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-sort-amount-asc"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-sort-amount-desc"></i> Sort amount desc': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-sort-amount-desc"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-sort-asc"></i> Sort asc': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-sort-asc"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-sort-desc"></i> Sort desc': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-sort-desc"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-sort-numeric-asc"></i> Sort numeric asc': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-sort-numeric-asc"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-sort-numeric-desc"></i> Sort numeric desc': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-sort-numeric-desc"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-soundcloud"></i> Soundcloud': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-soundcloud"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-space-shuttle"></i> Space shuttle': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-space-shuttle"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-spinner"></i> Spinner': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-spinner"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-spoon"></i> Spoon': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-spoon"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-spotify"></i> Spotify': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-spotify"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-square"></i> Square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-square-o"></i> Square o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-square-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-stack-exchange"></i> Stack exchange': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-stack-exchange"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-stack-overflow"></i> Stack overflow': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-stack-overflow"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-star"></i> Star': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-star"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-star-half"></i> Star half': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-star-half"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-star-half-o"></i> Star half o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-star-half-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-star-o"></i> Star o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-star-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-steam"></i> Steam': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-steam"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-steam-square"></i> Steam square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-steam-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-step-backward"></i> Step backward': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-step-backward"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-step-forward"></i> Step forward': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-step-forward"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-stethoscope"></i> Stethoscope': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-stethoscope"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-stop"></i> Stop': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-stop"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-strikethrough"></i> Strikethrough': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-strikethrough"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-stumbleupon"></i> Stumbleupon': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-stumbleupon"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-stumbleupon-circle"></i> Stumbleupon circle': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-stumbleupon-circle"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-subscript"></i> Subscript': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-subscript"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-suitcase"></i> Suitcase': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-suitcase"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-sun-o"></i> Sun o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-sun-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-superscript"></i> Superscript': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-superscript"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-table"></i> Table': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-table"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-tablet"></i> Tablet': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-tablet"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-tachometer"></i> Tachometer': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-tachometer"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-tag"></i> Tag': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-tag"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-tags"></i> Tags': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-tags"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-tasks"></i> Tasks': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-tasks"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-taxi"></i> Taxi': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-taxi"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-tencent-weibo"></i> Tencent weibo': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-tencent-weibo"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-terminal"></i> Terminal': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-terminal"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-text-height"></i> Text height': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-text-height"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-text-width"></i> Text width': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-text-width"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-th"></i> Th': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-th"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-th-large"></i> Th large': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-th-large"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-th-list"></i> Th list': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-th-list"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-thumb-tack"></i> Thumb tack': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-thumb-tack"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-thumbs-down"></i> Thumbs down': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-thumbs-down"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-thumbs-o-down"></i> Thumbs o down': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-thumbs-o-down"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-thumbs-o-up"></i> Thumbs o up': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-thumbs-o-up"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-thumbs-up"></i> Thumbs up': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-thumbs-up"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-ticket"></i> Ticket': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-ticket"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-times"></i> Times': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-times"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-times-circle"></i> Times circle': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-times-circle"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-times-circle-o"></i> Times circle o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-times-circle-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-tint"></i> Tint': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-tint"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-toggle-off"></i> Toggle off': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-toggle-off"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-toggle-on"></i> Toggle on': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-toggle-on"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-trash"></i> Trash': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-trash"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-trash-o"></i> Trash o': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-trash-o"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-tree"></i> Tree': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-tree"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-trello"></i> Trello': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-trello"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-trophy"></i> Trophy': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-trophy"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-truck"></i> Truck': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-truck"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-try"></i> Try': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-try"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-tty"></i> Tty': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-tty"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-tumblr"></i> Tumblr': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-tumblr"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-tumblr-square"></i> Tumblr square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-tumblr-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-twitch"></i> Twitch': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-twitch"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-twitter"></i> Twitter': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-twitter"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-twitter-square"></i> Twitter square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-twitter-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-umbrella"></i> Umbrella': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-umbrella"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-underline"></i> Underline': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-underline"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-undo"></i> Undo': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-undo"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-university"></i> University': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-university"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-unlock"></i> Unlock': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-unlock"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-unlock-alt"></i> Unlock alt': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-unlock-alt"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-upload"></i> Upload': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-upload"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-usd"></i> Usd': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-usd"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-user"></i> User': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-user"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-user-md"></i> User md': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-user-md"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-users"></i> Users': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-users"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-video-camera"></i> Video camera': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-video-camera"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-vimeo-square"></i> Vimeo square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-vimeo-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-vine"></i> Vine': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-vine"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-vk"></i> Vk': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-vk"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-volume-down"></i> Volume down': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-volume-down"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-volume-off"></i> Volume off': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-volume-off"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-volume-up"></i> Volume up': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-volume-up"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-weibo"></i> Weibo': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-weibo"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-weixin"></i> Weixin': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-weixin"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-wheelchair"></i> Wheelchair': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-wheelchair"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-wifi"></i> Wifi': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-wifi"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-windows"></i> Windows': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-windows"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-wordpress"></i> Wordpress': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-wordpress"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-wrench"></i> Wrench': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-wrench"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-xing"></i> Xing': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-xing"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-xing-square"></i> Xing square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-xing-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-yahoo"></i> Yahoo': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-yahoo"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-yelp"></i> Yelp': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-yelp"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-youtube"></i> Youtube': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-youtube"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-youtube-play"></i> Youtube play': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-youtube-play"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                            '<i class="fa fa-lg fa-youtube-square"></i> Youtube square': function () {
+                                this.insertHTML('<i class="fa fa-lg fa-youtube-square"></i>');
+                                this.sync();
+                                this.saveUndoStep();
+                            },
+                            
+                        },
+                        refresh: function () {
+                            // This method is called when the state of the button might have been changed.
+                        },
+                        refreshOnShow: function () {
+                            // This method is called when the dropdown context menu is shown.
+                        }
+                    }
+                }
+        })
+    });
+</script>
+
+</body>
+</html>
